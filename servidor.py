@@ -12,7 +12,7 @@ from urllib.parse import urlsplit
 import webbrowser
 
 ROOT = Path(__file__).resolve().parent
-STATIC = {'/': ('index.html', 'text/html; charset=utf-8'), '/index.html': ('index.html', 'text/html; charset=utf-8'), '/app.js': ('app.js', 'text/javascript; charset=utf-8'), '/styles.css': ('styles.css', 'text/css; charset=utf-8')}
+STATIC = {'/': ('index.html', 'text/html; charset=utf-8'), '/index.html': ('index.html', 'text/html; charset=utf-8'), '/app.js': ('app.js', 'text/javascript; charset=utf-8'), '/styles.css': ('styles.css', 'text/css; charset=utf-8'), '/assets/logo-roque.png': ('assets/logo-roque.png', 'image/png')}
 TOKEN = secrets.token_urlsafe(32)
 DB = None
 

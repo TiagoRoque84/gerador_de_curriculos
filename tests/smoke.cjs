@@ -34,6 +34,7 @@ async function run(){
  const navigation=await cdp('Page.navigate',{url:'file://'+path.join(root,'index.html')});
  if(navigation.errorText){console.log('INFO: política do Chromium bloqueou file://; validando a mesma interface pelo servidor local.');await cdp('Page.navigate',{url:srv.url});}
  await until(()=>js('!!document.getElementById("begin")'));
+ await until(()=>js('document.querySelector(".company-logo").complete && document.querySelector(".company-logo").naturalWidth > 0'));
  await click('#begin');await click('#next');assert.match(await js('document.getElementById("form-error").textContent'),/nome/);
  await set('name','Ana <script>alert(1)</script>');await set('email','errado');await click('#next');assert.equal(await js('document.querySelector("[aria-current=step]").dataset.step'),'0');
  await set('name','Ana Souza');await set('email','ana@example.com');await click('#next');await set('objective','Auxiliar administrativo');await click('#next');await click('[data-add=experiences]');await set('experiences.0.role','Atendente');await set('experiences.0.company','<script>alert(1)</script>');assert.equal(await js('document.querySelectorAll("#preview script").length'),0);

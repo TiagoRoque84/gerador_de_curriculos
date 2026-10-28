@@ -2,12 +2,16 @@
 
 Uma iniciativa da **Roque Consultoria Digital**.
 
+O logo da empresa está incluído em `assets/logo-roque.png` e aparece no cabeçalho e rodapé da interface. A imagem é carregada localmente, inclusive sem internet. Mantenha a pasta `assets` junto aos demais arquivos ao distribuir o sistema.
+
+Esta versão do logo foi preparada com apoio de IA a partir da referência enviada pelo responsável pela marca no chat; não é uma cópia binária do arquivo original do computador. Para usar o arquivo original posteriormente, substitua `assets/logo-roque.png`, mantendo o mesmo nome.
+
 Gerador de currículos em português para ações de extensão e orientação profissional. Perguntas passo a passo, prévia, foto opcional, impressão e PDF. Funciona sem internet e sem cadastro, com um banco SQLite local para consultar e editar os currículos. Não usa bibliotecas externas.
 
 ## Como usar
 
 1. No GitHub, clique em **Code → Download ZIP** (ou baixe o ZIP disponibilizado com o projeto).
-2. **Extraia todos os arquivos** para uma pasta no computador. Não abra de dentro do ZIP. Mantenha `index.html`, `styles.css` e `app.js` juntos.
+2. **Extraia todos os arquivos** para uma pasta no computador. Não abra de dentro do ZIP. Mantenha `index.html`, `styles.css`, `app.js`, `servidor.py` e a pasta `assets` juntos.
 3. Tenha **Python 3.10 ou mais recente** instalado no computador (no Windows, marque **Add Python to PATH** na instalação). Não é necessário instalar MySQL, pacotes pip ou Node.js para usar o programa.
 4. No Windows, dê dois cliques em **Abrir no Windows.bat**. No macOS, use **Abrir no Mac.command**; no Linux, execute `sh "Abrir no Linux.sh"`. Também é possível executar `python3 servidor.py` (Windows: `py -3 servidor.py`). O navegador abre automaticamente. Mantenha a janela do servidor aberta durante o uso. Se o navegador não abrir, copie o endereço mostrado no terminal.
 5. Clique em **Criar meu currículo** e siga as perguntas. Os campos opcionais podem ficar em branco. Inclua experiências e formações da mais recente para a mais antiga.

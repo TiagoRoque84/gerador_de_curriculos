@@ -1,0 +1,9 @@
+# Dados pessoais e arquivos gerados não devem ir para o GitHub.
+*.pdf
+meu-curriculo-para-editar*.json
+node_modules/
+.DS_Store
+Thumbs.db
+*.sqlite3
+*.sqlite3-*
+__pycache__/

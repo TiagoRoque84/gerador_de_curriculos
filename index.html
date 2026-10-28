@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Monte seu currículo passo a passo, sem internet e sem cadastro.">
+  <title>Meu Currículo • Roque Consultoria Digital</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Meu Currículo, início"><span class="brand-icon" aria-hidden="true">▤</span> Meu Currículo</a>
+    <span class="offline"><span aria-hidden="true">●</span> Funciona sem internet</span>
+  </header>
+
+  <main id="app">
+    <section id="welcome" class="welcome" aria-labelledby="welcome-title">
+      <div class="welcome-copy">
+        <p class="eyebrow">SEU PRÓXIMO PASSO COMEÇA AQUI</p>
+        <h1 id="welcome-title">Sua história merece<br>um bom currículo.</h1>
+        <p class="intro">Responda algumas perguntas simples. A gente organiza tudo em um currículo pronto para imprimir ou salvar em PDF.</p>
+        <div class="welcome-actions">
+          <button id="begin" class="primary large">Criar meu currículo <span aria-hidden="true">→</span></button>
+          <button id="load-welcome" class="text-button">Continuar de um arquivo salvo</button>
+          <button id="library-welcome" class="secondary" hidden>Consultar currículos salvos</button>
+        </div>
+        <ul class="benefits"><li>Sem cadastro e sem custo</li><li>Com foto ou sem foto</li><li>Seus dados ficam neste computador</li></ul>
+        <p class="community">Feito para aproximar pessoas de novas oportunidades.<br>Uma ferramenta para ações de extensão e orientação profissional.</p>
+      </div>
+      <div class="sample-wrap" aria-hidden="true"><div class="sample-paper">
+        <div class="sample-label">SEU CURRÍCULO, BEM ORGANIZADO</div>
+        <div class="sample-name">Seu nome aqui</div><div class="sample-contact">Sua cidade · Telefone · E-mail</div>
+        <h3>Objetivo profissional</h3><p>Uma nova oportunidade para mostrar seu potencial.</p>
+        <h3>Experiência profissional</h3><strong>Sua trajetória tem valor</strong><p>Empregos, atividades autônomas e trabalhos voluntários.</p>
+        <h3>Formação acadêmica</h3><div class="sample-line"></div><div class="sample-line short"></div>
+        <h3>Habilidades e cursos</h3><div class="sample-line"></div><div class="sample-line short"></div>
+      </div><span class="sample-note">Simples de preencher. Fácil de compartilhar.</span></div>
+    </section>
+
+    <section id="builder" hidden aria-label="Criar currículo">
+      <div class="workspace-heading"><div><p class="eyebrow">UM PASSO DE CADA VEZ</p><h1>Vamos montar seu currículo</h1></div><div class="toolbar"><button id="library-builder" class="secondary" hidden>Consultar salvos</button><button id="save-db" class="primary" hidden>Salvar no computador</button><button id="save-draft" class="secondary">Baixar arquivo de edição</button></div></div>
+      <div class="workspace">
+        <aside class="steps-panel" aria-label="Etapas do currículo"><ol id="steps"></ol><div class="privacy-note"><strong>Você está no controle</strong><p>Os dados ficam neste computador. Salve no banco local ou baixe um arquivo antes de fechar.</p></div><button id="load-builder" class="text-button">Abrir arquivo salvo</button><button id="reset" class="text-button danger">Começar outro currículo</button></aside>
+        <div class="editor">
+          <div class="progress-label"><span id="step-counter"></span><span id="progress-percent"></span></div><div class="progress-track"><div id="progress"></div></div>
+          <form id="step-form" novalidate>
+            <div id="step-content"></div>
+            <p id="form-error" class="error" role="alert" hidden></p>
+            <div class="navigation"><button id="back" type="button" class="secondary">← Voltar</button><button id="next" type="submit" class="primary">Continuar →</button></div>
+          </form>
+        </div>
+        <aside class="preview-panel" aria-label="Prévia do currículo"><div class="preview-heading"><strong>Seu currículo está tomando forma</strong><span>PRÉVIA</span></div><div id="preview" class="resume mini"></div><p class="preview-tip">Os campos vazios não aparecem no currículo.</p></aside>
+      </div>
+    </section>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <dialog id="library"><div class="library-header"><h2>Currículos salvos</h2><button id="close-library" class="secondary">Fechar</button></div><p class="hint">Salvos apenas neste computador. Todos que usam esta conta do computador podem consultá-los.</p><label for="library-search">Buscar pelo nome</label><input id="library-search" type="search" placeholder="Digite um nome"><p id="library-status" role="status"></p><div id="library-list"></div></dialog>
+  </main>
+  <div id="print-resume" class="resume" aria-label="Currículo para impressão"></div>
+  <input id="draft-file" type="file" accept=".json,application/json" hidden>
+  <footer class="site-footer"><p>Meu Currículo <span>•</span> Sem internet. Sem cadastro. No seu ritmo.</p><p class="brand-credit">Uma iniciativa de <strong>Roque Consultoria Digital</strong></p></footer>
+  <script src="app.js"></script>
+</body>
+</html>

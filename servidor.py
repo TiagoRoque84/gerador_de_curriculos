@@ -45,6 +45,9 @@ def validate(doc):
     for key in text_keys:
         if not isinstance(data.get(key), str) or len(data[key]) > (1500000 if key == 'photo' else 3000):
             raise ValueError('Dados inválidos.')
+    for key in ['birthYear', 'maritalStatus', 'license']:
+        if key in data and (not isinstance(data[key], str) or len(data[key]) > 300):
+            raise ValueError('Dados pessoais inválidos.')
     if type(data.get('firstJob')) is not bool:
         raise ValueError('Dados inválidos.')
     import re

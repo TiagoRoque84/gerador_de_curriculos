@@ -41,6 +41,8 @@ As edições ficam na memória da página até você salvar no banco ou baixar u
 
 ## O que está incluído
 
+- Ano de nascimento, estado civil e habilitação (A, B, AB, C, AC, D, AD, E ou AE), opcionais e incluídos na impressão quando preenchidos. Arquivos antigos continuam compatíveis.
+- Impressão sem margens do navegador, com espaçamento interno para preservar o layout. Caso o navegador ainda acrescente data, título ou caminho do arquivo, desmarque **Cabeçalhos e rodapés** em **Mais configurações** na janela de impressão.
 - Nome, cidade, estado e contatos. Nome e pelo menos um telefone ou e-mail são obrigatórios.
 - Objetivo profissional obrigatório e resumo opcional.
 - Várias experiências, formações e cursos, com opção de primeiro emprego.
